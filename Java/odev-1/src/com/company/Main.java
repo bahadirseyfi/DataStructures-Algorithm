@@ -1,7 +1,6 @@
 package com.company;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,10 +12,15 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
         roomInfo();
-        rooms_solidity();
+       // rooms_solidity();
+       // updateRoomInfo();
+       // Guest misafir = new Guest();
+       // misafir.make_reserv(2);
 
-        Guest misafir = new Guest();
-        misafir.make_reserv(1);
+        Reception resepsiyon = new Reception();
+        resepsiyon.make_reserv(3);
+        updateRoomInfo();
+        resepsiyon.check(3,"checkin");
 
 
     }
@@ -24,10 +28,45 @@ public class Main {
     static void rooms_solidity(){
         System.out.println("Uygun Odalar:");
         for(int i=0;i<4;i++){
-            if (rooms[i].getSolidity() == false){
+            if (!rooms[i].getSolidity()){
                 System.out.println("ODA: "+(i+1));
             }
         }
+    }
+
+    public static void updateRoomInfo(){
+
+      //  FileWriter fileWriter = null;
+        try {
+            for (int i=0;i<4;i++) {
+                FileWriter fileWriter = new FileWriter("oda"+(i+1)+".txt");
+
+                PrintWriter printWriter = new PrintWriter(fileWriter);
+                printWriter.print(rooms[i].getRoom_number() + "\n");
+                printWriter.print(rooms[i].getSolidity() + "\n");
+                printWriter.print(rooms[i].getRezervation() + "\n");
+                printWriter.print(rooms[i].getCheck());
+                printWriter.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        /*
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(
+                    "oda2.txt"));
+            writer.write("hello");
+            writer.newLine();
+            writer.write("asdsad");
+            writer.newLine();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+         */
     }
 
     static void roomInfo() throws FileNotFoundException {

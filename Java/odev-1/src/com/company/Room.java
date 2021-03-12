@@ -2,10 +2,10 @@ package com.company;
 
 public class Room {
 
-    private Integer room_number;
-    private Boolean solidity;   //DOLULUK
-    private Boolean rezervation; //Rezerve mi ?
-    private String check;
+    private Integer room_number; // ODA ID'Sİ
+    private Boolean solidity;    // DOLULUK
+    private Boolean rezervation; // REZERVASYON
+    private String check;        // ODA CHECK-IN / OUT DURUMU
 
     Room(Integer room_number, Boolean solidity,Boolean rezervation, String check){
         this.room_number = room_number;
@@ -13,8 +13,11 @@ public class Room {
         this.rezervation = rezervation;
         this.check = check;
     }
-
+    // Odalar ilk oluşturulurken tanımlamalar yapılmadığı için boş constructor oluşturuluyor.
     Room(){}
+
+
+    // Oda özelliklerinin okunması ve değişiklikler yapılması için get ve set metodları :
 
     public Boolean getRezervation() {
         return rezervation;

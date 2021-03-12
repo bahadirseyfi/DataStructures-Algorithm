@@ -1,4 +1,4 @@
 4
 false
 true
-checkin
+checkout

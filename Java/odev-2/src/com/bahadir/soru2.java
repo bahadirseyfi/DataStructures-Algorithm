@@ -1,5 +1,6 @@
 package com.bahadir;
 
+// GitHub :  https://github.com/bahadirseyfi/DataStructures-Algorithm/tree/main/Java/odev-2/src/com/bahadir
 
 // Yazılan KODUN NEYE HİZMET ETTİĞİNİ ANLAYAMADIM, N DEĞİŞKENİ NEDİR TARGET DENEN HEDEF NEDİR,
 // PYTHON KODU ANCAK BAZI DEĞİŞKENLERİN AMACINI ANLAYAMADIĞIM İÇİN DERSTE GÖRDÜĞÜM KADARIYLA HESAPLAMA

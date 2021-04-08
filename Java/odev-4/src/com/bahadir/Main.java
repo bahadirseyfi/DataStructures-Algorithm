@@ -6,6 +6,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+// GitHub Link: https://github.com/bahadirseyfi/DataStructures-Algorithm/tree/main/Java/odev-4
+    
+
 /*
 Aşağıdaki ifadelerin geçerli olup olmadığını belirlemek için stack sınıfınızı Java programında yazın.
 Geçerli ifadeler şu karakterlerden oluşur: "X () []’ (yani: çift tırnak, büyük X, açık parantez, kapalı
@@ -82,4 +85,13 @@ public class Main {
     }
 }
 
-//  https://serkanerip.medium.com/stack-ile-parantezlerin-kontrolü-d894497c9918
+/*
+ Yararlanılan Kaynaklar:
+
+  https://medium.com/@byron.skoutaris/stacks-queues-a3554ebadfc8
+  https://www.programiz.com/dsa
+  https://serkanerip.medium.com/stack-ile-parantezlerin-kontrolü-d894497c9918
+  https://medium.com/swlh/hashmap-implementation-for-java-90a5f58d4a5b
+
+*/
+

@@ -24,6 +24,7 @@ public class Main {
         theArray = new String[size];
         Arrays.fill(theArray, "-1");
     }
+
     public void displayTheStack() {
         int increment = 0;
         for (int m = 0; m < 3; m++) {

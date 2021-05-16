@@ -52,4 +52,8 @@ public class QuickSort {
         }
         System.out.println(myArray);
     }
+    public static long expected_runtime(int arr_length){
+        long n = arr_length;
+        return n*n + 5;
+    }
 }

@@ -1,0 +1,62 @@
+
+github : https://github.com/bahadirseyfi/DataStructures-Algorithm/tree/main/Java/odev-6/src/com/bahadir
+
+Proje Rapor
+
+Soru - 1
+
+Projede kullanılan sıralama algoritmalarının neler yaptığı satır olarak açıklanmıştır ancak genel olarak tanımlarından ve neler yaptıklarından değineceğim:
+
+
+Selection Sort:
+Bu algoritma bana göre düşünmesi en kolay sıralama algoritması. İlk elemandan son elemana kadar her elemanı kendinden sonra gelen kendinden küçük elemanların en küçüğü ile yer değiştiriyoruz. Örneğin aşağıdaki diziyi 3. elemanına kadar sıraladığımızı düşünelim ve daha sonra ne yapacağımıza bakalım.
+
+{1, 2, 3, 10, 6, 4, 7}
+
+Gördüğümüz gibi, 3. elemana kadar sıralanmış bir dizimiz var. Bu durumda şu anda 4. eleman olan 10’a bakmaktayız ve kuralımıza göre, 10’dan sonra gelen ve 10’dan küçük olan en küçük elemanı bulup 10 ile yerini değiştirmemiz gerekiyor. Bu adımda bu kurala uyan sayımız 4. Yerlerini değiştirdiğimizde dizimiz şu hale geliyor:
+
+{1, 2, 3, 4, 6, 10, 7}
+
+Üçüncü elemana baktığımıza göre bir sonraki adımda da dördüncü elemana bakıyoruz ve kuralı uyguluyoruz. Dizinin sonuna kadar böyle devam ettiğimizde tüm diziyi sıralamış oluyoruz.
+
+Bubble Sort yani kabarcık sıralama :
+
+Sıralama algoritmaları arasında yazılması en kolay olan, ama büyük dizilerde çok yavaş kalan bir sıralama yöntemidir.
+Temel mantığımız her diziyi baştan sona gezdiğimizde bir elemanı doğru bir şekilde sıralamış olacağız. Yani her elemanı
+doğru sıralamak için diziyi uzunluğu kadar gezmemiz gerekmekte.
+
+for(i=1;i<=n;i++)
+
+        for(j=n;j>i;j--)
+
+            if(dizi[j] < dizi[j-1]){
+
+                tmp = dizi[j-1];
+                dizi[j-1] = dizi[j];
+                dizi[j] = tmp;
+
+ }
+
+ Yukarıdaki for döngümüz diziyi N defa yani uzunluğu kadar gezmemizi sağlıyor. İçindeki for döngüsü ise sondan başa gelerek küçük elemanı başa doğru getiriyor.
+ if kontrolü sağdaki elemanın soldaki elemandan küçük olup olmadığını kontrol ediyor. Biz istiyoruz ki sağdaki eleman her zaman soldakinden büyük olması lazım.
+ Çünkü bu örneğimizde algoritma diziyi küçükten büyüğe doğru sıralıyor.
+
+
+ Soru 2 de ise tüm algoritmaların barındırdığı açıklamalara ek algoritma açıklaması yapacağım
+
+MERGE SORT
+Diziyi sürekli ikiye bölüp ve en küçük yani bölünemeyecek elemana sahip olana kadar devam eder.Daha sonra parçaladığı bu elemanları kendi içlerinde sıralayarak tıpkı bölerken uygulanan adımlar gibi bu sefer birleştirerek sıralayarak üst dizine geçer ve birleştirme sonunda sıralı bir diziye ulaşılır.
+
+Her düğümün çocuk düğümlerinin kendinden küçük veya eşit olma kuralını esas alır. Sıralama yapısı dizinin ilk elemanı her zaman en büyük olacaktır. Dizi üzerinde i. eleman ile , çocukları 2*i. ve ((2*i)+1) karşılaştırılıp büyük olan elemanlar yer değiştirilecektir.
+heap sort
+
+Dizinin son elemanları dizinin ortasındaki elemanların çocuk düğümü olacağından bu işlem dizinin yarısına kadar yapılır. Elde edilen diziyi sıralamak için ise dizinin ilk elemanı en büyük olduğu bilindiğinde dizini son elemanıyla ilk elemanı yer değiştirilerek büyük eleman sona atılır. Bozulan diziye bu işlemler baştan sona tekrar uygulanır. Dizi boyutu 1 oluncaya kadar işleme devam edilir.
+
+
+QUICK SORT
+İlk olarak pivot eleman seçildikten sonra, pivottan büyük elemanlar sağına, pivottan küçük elemanlar soluna gelecek şekilde bir sıralama gerçekleştirilir. Pivot elemana eşit olan sayılar sıralamanın küçükten büyüğe ya da büyükten küçüğe olmasına bağlı olarak pivot elemanın her iki tarafına da geçebilir. Kodlamada sağ ve solun oluşması için iki indis gerekir.
+
+Özyinelemeli olarak (recursive) çağrılarak, oluşan küçük diziler için aynı işlem tekrarlanır. Sağdaki elemanlar içerisinden bir pivot ve soldaki elemanlar içerisinden bir pivot seçilerek tekrar aynı işlem gerçekleşir ve sıralanır. Ta ki bütün dizi sıralanana kadar aynı işlem gerçekleşir.
+
+
+HEAP SORT

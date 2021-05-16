@@ -51,4 +51,8 @@ public class MergeSort {
         // Her bölümdeki merge fonksiyonunu çağırırız
         merge(left_arr, right_arr, arr, mid, len - mid);
     }
+    public static long expected_runtime(int arr_length){
+        long n = arr_length;
+        return n*n + 5;
+    }
 }
